@@ -1,0 +1,106 @@
+/* PC */
+@media(min-width: 1024px)
+{
+    
+}
+/* Tablet && Mobile */
+@media(max-width: 1023px)
+{
+    #content .place-buy-button{
+        padding: 15px 16px;
+    }
+    .contact-form .form-control{
+        padding: 15px;
+    }
+    .contact-info{
+        line-height:2.8;
+    }
+    .contact-info a{
+        color:blue;
+        font-weight:bold;
+        opacity: 0.7;
+    }
+    .contact-info a:hover{
+        opacity: 1;
+    }
+    .socials-list i{
+        font-size: 32px;
+        margin: 0 8px;
+    }
+    .copyright a{
+        padding: 16px 0px;
+        display: inline-block;
+    }
+    
+}
+
+/* Tablet */
+@media(min-width:740px) and (max-width: 1023px)
+{
+    
+}
+/* Mobile */
+@media(max-width: 739px)
+{
+    #header{
+        overflow: hidden;
+    }
+    #header .search-button{
+        display: none;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+    #nav{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav li{
+        display: block;
+    }   
+    #nav .subnav{
+        position: initial;
+    } 
+    #nav .subnav li{
+        background-color:black;
+    }
+    #nav .subnav li a{
+        color: white;
+        padding: 5px 42px;
+    }
+    #slider .text-content{
+        display: none;
+    }
+    #content .member-item{
+        width: 100%;
+        float: none;
+    }
+    #content .member-img{
+        width: 60%;
+    }
+    #tour .s-col-full{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    #contact .s-col-full{
+        width: 100%;
+        float: none;
+        margin-bottom: 16px;
+    }
+    /* Or */
+    /* #contact .col, #contact .col-half{
+        float: none;
+        width: 100%;
+    } */
+    #contact .s-full-width{
+        width: 100%;
+        /* Khong hieu sao lai bi meo */
+        transform: translateX(4px);
+    }
+    #tour .s-full-width{
+        width: 100%;
+        text-align: center;
+    }
+}
