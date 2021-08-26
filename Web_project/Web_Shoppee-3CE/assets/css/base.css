@@ -1,0 +1,208 @@
+:root{
+    --primary-color: rgb(238, 75,43);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --star-gold-color:#ffce3d;
+    --border-color: #dbdbdb;
+    --header-height: 120px;
+    --navbar-height:40px;
+    --header-with-search: cal(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.grid__column-2{
+    padding-left:12px;
+    padding-right: 12px;
+    width:calc((100% / 12) * 2); 
+}
+.grid__column-3{
+    padding-left:12px;
+    padding-right: 12px;
+    width:calc((100% / 12)*4);
+}
+.grid__column-2-4{
+    padding-left:12px;
+    padding-right: 12px;
+    width:calc((100% / 10) *2);
+}
+.grid__column-10{
+    padding-left:12px;
+    padding-right: 12px;
+    width:calc((100% / 12) * 10); 
+}
+
+
+/* Temp */
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.25s;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.4);   
+   
+}
+.modal__body{
+    /* position: relative; */
+    width: 400px;
+    background-color:white;
+    z-index: 1;
+    margin: auto;
+    border-radius: 4px;
+    --growth-from:0.75;
+    --growth-to:1;
+    animation: growth linear 0.25s;
+}
+
+/* button style */
+.btn{
+    min-width: 124px;
+    height: 36px;
+    text-decoration:none;
+    border:none;
+    font-size:1.4rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
+    background-color: white;
+}
+.btn.btn--primary{
+    background-color: rgba(238, 75,43);
+    color: white;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1}    
+}
+
+@keyframes headerNotifyGrow{
+    from
+    {
+        opacity: 0;
+        transform:scale(0);
+    }
+    to
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Selection */
+.select-input{
+    display: flex;
+    width: 202px;
+    height:34px;
+    align-items: center;
+    justify-content:space-between;
+    font-size:1.4rem;
+    background-color:var(--white-color);
+    position: relative;
+}
+.select-input__label{
+    padding-left: 14px;
+    
+}
+.select-input__icon{
+    padding-right:14px;
+    color:#575757;
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__list{
+    position:absolute;
+    left:0;
+    right:0;
+    background-color:var(--white-color);
+    top:25px;
+    padding: 4px 0 4px 0;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.select-input__list::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:-10px;
+    width: 100%;
+    height:10px;
+    background-color:transparent;
+
+}
+.select-input__item{
+    list-style: none;
+    padding:8px 14px;
+}
+.select-input__item:hover .select-input__link{
+    color:var(--primary-color);
+}
+.select-input__link{
+    text-decoration: none;
+    color:var(--text-color);
+}
+/* End selecttion */
+/* Start Base Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    list-style: none;
+}
+.pagination-item{
+    margin: 0 12px;
+}
+.pagination-item__link{
+    color:#989898;
+    font-size:1.6rem;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 2px;
+}
+.pagination-item--active .pagination-item__link{
+    color:var(--white-color);
+    background-color:var(--primary-color);
+}
+.pagination-item--active:hover .pagination-item__link{
+    filter:brightness(120%);
+}
+/* .pagination-item__icon{
+
+} */
+/* End Base Pagination */
