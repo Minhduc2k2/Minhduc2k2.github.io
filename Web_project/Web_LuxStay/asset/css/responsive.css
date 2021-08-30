@@ -1,0 +1,194 @@
+/* Mobile && Tablet */
+@media (max-width: 1023px)
+{
+    .header-with-search__icon{
+        display: block;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    
+    .header__search{
+        margin-left: 0;
+    }
+    /* .row-header{
+        padding-left: 30px;
+        padding-right:30px;
+    } */
+        /*Start Menu btn  */
+    .header-with-search__icon
+    {
+        padding: 4px;
+    }
+    .header-with-search__icon-btn{
+        color:#737373;
+        font-size: 2.8rem;
+    }
+    .luxstay__overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left:0;
+        bottom: 0;
+        background-color:rgba(0,0,0,0.5);
+        z-index: 3;
+        animation: fadeIn ease 1s;
+        display: none;
+    }
+    @keyframes fadeIn{
+        from {opacity: 0;}
+        to{opacity: 1;}
+    }
+    .header-with-search__menu{
+        position:fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width:40vw;
+        background-color:var(--white-color);
+        z-index:4;
+        transform: translateX(-100%) ;
+        opacity: 0.5;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    .menu-close__icon{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 3rem;
+        color:rgb(115,115,115);
+    }
+    .header-with-search__menu .header__navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    
+    }
+    .header-with-search__menu .header__navigation-tittle,
+    .header-with-search__menu .header__navigation-btn{
+        margin: 20px;
+        font-size:1.5rem;
+        font-weight:400;
+        color:var(--text-color);
+    }
+    .checkbox__menu:checked ~ .header-with-search__menu{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .checkbox__menu:checked ~ .luxstay__overlay{
+        display: block;
+    }
+        /* End Menu btn */
+        /* Start city */
+    .row-scroll .btn-scroll{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .row-scroll .btn-scroll{
+        overflow-x: auto;        
+    }
+    .row-scroll .btn-scroll::-webkit-scrollbar{
+        display: none;
+    }
+    .row-scroll .btn-scroll__left,
+    .row-scroll .btn-scroll__right{
+        display:none;
+    }
+        /* End city */
+        /* Start Advertise */
+    .advertisement-download {
+        margin: 20px;
+    }
+    .footer__download{
+        display:block;
+    }
+    .footer__store{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .footer__app{
+        width: 160px;
+    }
+        /* End Advertise */
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px)
+{
+    .hide-on-tablet{
+        display: none;
+    }
+    .row{
+        margin: 0 -40px;
+    }
+    .row-header{
+        margin: 0 20px;
+    }
+    
+    .header__navigation-btn{
+        width:90%;
+        height: 56px;
+        border-radius: 30px;
+    }
+    .header__navigation-icon{
+        position: relative;
+        right: -164px;
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 723px)
+{
+    .hide-on-mobile{
+        display: none;
+    }
+    .row{
+        margin: 0 20px;
+    }
+    .row-header{
+        margin: 0 20px;
+    }
+    .header-with-search__icon-btn{
+        padding: 0 4px;
+    }
+    .header__search-btn{
+        width:44px;
+    }
+    .main-tittle{
+        line-height: 2.8rem;
+    }
+    .header__navigation-btn{
+        width:75%;
+        border-radius: 10px;
+    }
+    .city__img{
+        height:192px;
+    }
+    .city-tittle__main{
+        line-height:2rem;
+    }
+    .advertisement_logo{
+        margin-top:20px;
+        width: 175px;
+    }
+    .big-tittle{
+        font-size:2rem;
+    }
+    .big-tittle--space{
+        margin-bottom: 0;
+    }
+    .advertisement-downloads__app{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .advertisement-download{
+        margin-left: 0;
+    }
+    .footer-certify__img{
+       flex: 1;
+    }
+}
