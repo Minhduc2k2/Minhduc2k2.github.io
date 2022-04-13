@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./default.png) no-repeat center/cover;
+}
+#weather{
+    width: 350px;
+    border-radius:10px;
+    padding: 30px 20px;
+    background: url(./default.png) no-repeat center/cover;
+}
+
+.t-0{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./snow.png) no-repeat center/cover;
+}
+.t-0 #weather{
+    background: url(./snow.png) no-repeat center/cover;
+}
+.t-10{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./cold.jpg) no-repeat center/cover;
+}
+.t-10 #weather{
+    background: url(./cold.jpg) no-repeat center/cover;
+}
+.t-20{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./cool.jpg) no-repeat center/cover;
+}
+.t-20 #weather{
+    background: url(./cool.jpg) no-repeat center/cover;
+}
+.t-30{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./spring.png) no-repeat center/cover;
+}
+.t-30 #weather{
+    background: url(./spring.png) no-repeat center/cover;
+}
+.t-40{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./warm.png) no-repeat center/cover;
+}
+.t-40 #weather{
+    background: url(./warm.png) no-repeat center/cover;
+}
+.t-50{
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.5)), url(./hot.jpg) no-repeat center/cover;
+}
+.t-50 #weather{
+    background: url(./hot.jpg) no-repeat center/cover;
+}
+
+.search{
+    width: 100%;
+    padding: 10px 20px;
+    border:none;
+    outline:none;
+    background-color:rgba(255,255,255,0.25);
+    /* border-radius: 0 15px 0 15px; */
+    box-shadow: 0 5px 4px rgba(0,0,0,0.25);
+    transition: all 0.25s ease-in-out;
+    font-size: 19px;
+}
+.search::placeholder{
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.5);
+}
+.search:focus{
+    border-radius: 15px 15px 15px 15px;
+    background-color:rgba(255,255,255,0.75);
+}
+.content{
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+    transition: 0.5s ease-in-out;
+}
+.hide{
+    visibility: hidden;
+    opacity: 0;
+}
+.capital{
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+/* .city{
+
+}
+.country{
+
+} */
+.time{
+    margin: 15px 0 20px 0;
+    font-size:16px
+}
+.temperature{
+    font-size: 65px;
+    text-shadow: 4px 4px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.5);
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.25);
+    border-radius: 16px;
+    margin: 0 48px;
+    padding: 20px
+}
+.short-description{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+    margin: 30px auto;
+}
+.more-description {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.more-description div{
+    display:flex;
+    flex-direction: column;
+    padding:5px;
+    text-shadow: 0 1px rgba(0,0,0,0.5);
+}
+.more-description div i{
+    margin: 8px 0;
+    text-shadow: 0 1px rgba(0,0,0,0.5);
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+
+.microphone{
+    color:white;
+    font-size:20px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.microphone .recording-icon{
+    display: none;
+    width: 15px;
+    height:15px;
+    border-radius: 50% ;
+    background-color: #e22d2d;
+    animation: pulse 2s infinite linear;
+}
+.microphone.recording .recording-icon{
+    display:block;
+}
+.microphone.recording .fa-microphone{
+    display:none;
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 3px 0 rgba(173,0,0,0.5);
+    }
+    50%{
+        box-shadow: 0 0 3px 5px rgba(173,0,0,0.25);
+    }
+    100%{ 
+        box-shadow: 0 0 3px 5px rgba(173,0,0,0)
+    }
+}
